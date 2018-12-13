@@ -1,0 +1,13 @@
+---
+applications:
+- name: demoStarterProject
+  memory: 1024M
+  instances: 1
+  path: target/demoStarterProject-0.0.1-SNAPSHOT.jar
+  services:
+  - cloudapps-tool-registry
+  - config-server
+  routes:
+  - route: demoStarterProject-test.apps.pcf.dxc.com
+  env:
+    SPRING_PROFILES_ACTIVE: pcf
