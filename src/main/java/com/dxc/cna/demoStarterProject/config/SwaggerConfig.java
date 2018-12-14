@@ -22,7 +22,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 		  
-		  public static final ApiInfo DEFAULT_API_INFO = new ApiInfo($projectname, "This is a Starter Project", "1.0", "", "Srimanta.kum.nayak@dxc.com", "Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0");
+		  public static final ApiInfo DEFAULT_API_INFO = new ApiInfo(demoStarterProject, "This is a Starter Project", "1.0", "", "Srimanta.kum.nayak@dxc.com", "Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0");
 
 		  private static final Set<String> DEFAULT_PRODUCES_AND_CONSUMES = 
 		      new HashSet<String>(Arrays.asList("application/json"));
@@ -30,7 +30,7 @@ public class SwaggerConfig {
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.dxc.cna." + $projectname + ".controller"))
+				.apis(RequestHandlerSelectors.basePackage("com.dxc.cna." + demoStarterProject + ".controller"))
 				.paths(PathSelectors.any()).build().apiInfo(DEFAULT_API_INFO)
 		        .produces(DEFAULT_PRODUCES_AND_CONSUMES)
 		        .consumes(DEFAULT_PRODUCES_AND_CONSUMES)
