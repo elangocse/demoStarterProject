@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>demoStarterProject</name>
-	<description>This is my CNA WorkBench project</description>
+	<description>demoStarterProject</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
